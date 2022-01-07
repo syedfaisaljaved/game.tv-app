@@ -24,7 +24,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         yield ErrorUsernameState();
         return;
       }
-      if(!"password123".contains(event.pass)){
+      if("password123" != event.pass){
         yield ErrorPasswordState();
         return;
       }
